@@ -1708,3 +1708,5 @@ Served asset /jquery_ujs.js - 200 OK (20ms)
 
 Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-26 17:10:01 -0300
 Served asset /jquery.js - 200 OK (36ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
