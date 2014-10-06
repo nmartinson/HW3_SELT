@@ -1,7 +1,12 @@
 Rottenpotatoes::Application.routes.draw do
   resources :movies,:users
   root :to => redirect('/movies')
-  # The priority is based upon order of creation:
+
+  match '/login', to: 'session#new', via: :get
+  match '/login_create', to: 'session#create', via: :post
+  match '/logout', to: 'session#destroy', via: :delete
+
+# The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
