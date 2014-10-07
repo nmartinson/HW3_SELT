@@ -10,12 +10,10 @@
     %h1.title Rotten Potatoes!
     #main 
       - if !@current_user
-        - if flash[:warning]
-          #warning.message= flash[:warning]
+        #warning.message= flash[:warning]
         = button_to 'Sign in/Login', login_path, :method => :get
       - else
-        - if flash[:notice]
-          #notice.message= flash[:notice]
+        #notice.message= flash[:notice]
         = button_to 'Logout', logout_path, :method => :delete
   
       = yield
