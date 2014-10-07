@@ -14,7 +14,6 @@ class SessionsController < ApplicationController
       if( user.user_id == params[:user][:user_id] )
         if( user.email == params[:user][:email] )
           session[:session_token] = user.session_token
-          flash[:notice] = "You are logged in as #{user.user_id}" 
           redirect_to movies_path
           return
         end

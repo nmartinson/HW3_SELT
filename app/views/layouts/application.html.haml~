@@ -10,9 +10,11 @@
     %h1.title Rotten Potatoes!
     #main 
       - if !@current_user
-        #warning.message= flash[:warning]
+        - if flash[:warning]
+          #warning.message= flash[:warning]
         = button_to 'Sign in/Login', login_path, :method => :get
       - else
+        - flash[:notice] = "You are logged in as #{@current_user.user_id}"
         #notice.message= flash[:notice]
         = button_to 'Logout', logout_path, :method => :delete
   
