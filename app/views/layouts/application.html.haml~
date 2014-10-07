@@ -12,10 +12,10 @@
       - if !@current_user
         - if flash[:warning]
           #warning.message= flash[:warning]
-        = button_to 'Sign in/Login', login_path, :method => :get
+        = button_to 'Sign up/Login', login_path, :id => 'signup_login', :method => :get
       - else
-        - flash[:notice] = "You are logged in as #{@current_user.user_id}"
-        #notice.message= flash[:notice]
-        = button_to 'Logout', logout_path, :method => :delete
+        -# flash[:notice] = "You are logged in as #{@current_user.user_id}"
+        #message= "TEST"
+        = button_to 'Logout', logout_path, :id => 'logout', :method => :delete
   
       = yield
